@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.cyberdynesystems.nxt.MainActivity">
+
+    <TextView
+        android:id="@+id/vv_frag_drive_tv_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="NXT Device is not connectecd"
+        android:layout_alignParentTop="true"
+        android:textSize="18dp"
+        />
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/up_orange"
+        android:id="@+id/vv_frag_drive_btn_up"
+        android:layout_below="@+id/vv_frag_drive_tv_intro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/left_orange"
+        android:id="@+id/vv_frag_drive_btn_left"
+        android:layout_below="@+id/vv_frag_drive_btn_up"
+        android:layout_alignLeft="@+id/vv_frag_drive_tv_intro"
+        android:layout_alignStart="@+id/vv_frag_drive_tv_intro" />
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/right_orange"
+        android:id="@+id/vv_frag_drive_btn_right"
+        android:layout_below="@+id/vv_frag_drive_btn_up"
+        android:layout_toRightOf="@+id/vv_frag_drive_btn_up"
+        android:layout_toEndOf="@+id/vv_frag_drive_btn_up" />
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/down_orange"
+        android:id="@+id/vv_frag_drive_btn_down"
+        android:layout_below="@+id/vv_frag_drive_btn_right"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Power: "
+        android:id="@+id/vv_frag_drive_tv_power_label"
+        android:textSize="18dp"
+        android:layout_below="@+id/vv_frag_drive_btn_down"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vv_frag_drive_et_power_level"
+        android:layout_toRightOf="@+id/vv_frag_drive_tv_power_label"
+        android:layout_alignBaseline="@+id/vv_frag_drive_tv_power_label"
+        android:hint="0"
+         />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vv_frag_drive_slider"
+        android:layout_below="@+id/vv_frag_drive_et_power_level"
+       android:layout_alignLeft="@+id/vv_frag_drive_tv_power_label" />
+
+
+</RelativeLayout>
